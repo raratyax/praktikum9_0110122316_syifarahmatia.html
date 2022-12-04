@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+
+    <script>
+        function jumlah() {
+            let angka1 = document.getElementById("angka1").value;
+            let angka2 = document.getElementById("angka2").value;
+            hasil_var = parseInt(angka1) + parseInt(angka2);
+
+            let hasil = document.getElementById("hasiljumlah");
+            hasil.innerHTML = hasil_var;
+
+        }
+    </script>
+</head>
+<body>
+    Penjumlahan |
+    <a href="index2.html">Keliling & Luas Lingkaran</a> 
+    <a href="index3.html">Menghitung Kurs Rupiah</a> | 
+    <a href="index4.html">Biaya Parkir</a>
+
+    <br>
+    <hr>
+    <br>
+    <input type="number" id="angka1" value="">
+    <br>
+    +
+    <br>
+    <input type="number" id="angka2" value="">
+    <br>
+    <input type="submit" onclick="jumlah()" value="jumlahkan">
+    <br>
+    =
+    <br>
+    <span id="hasiljumlah"></span>
+    
+
+</body>
+</html>

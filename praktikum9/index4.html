@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index4</title>
+    <script>
+        function hitung_parkir() {
+            const per2jam_awal = 3000; // tarif 2 jam awal
+            const sejam = 1000; //perjam berikunya
+            let msk = document.getElementById("masuk").value;
+            let klr = document.getElementById("keluar").value;
+            let selisih = klr - msk;
+            let biaya = 0;
+            if(selisih <= 2) {
+                biaya = per2jam_awal;
+            }else {
+                let jam_tambahan = selisih - 2;
+                biaya = per2jam_awal + (sejam * jam_tambahan);
+            }
+
+            let area_hasil = document.getElementById("hasil");
+            area_hasil.innerHTML = "Biaya parkir anda" + " = " + biaya
+        }
+    </script>
+</head>
+<body>
+    <a href="index.html">Penjumlahan</a> |
+    <a href="index2.html">Keliling & Luas Lingkaran</a> |
+    <a href="index3.html">Menghitung Kurs Rupiah</a> | 
+    Biaya Parkir
+
+    <br>
+    <hr>
+    <br>
+    <fieldset>
+        <hr>
+        <h1>Hitung Biaya Parkir</h1>
+        Jam Masuk : 
+        <input type="number" value="" id="masuk"><br><br>
+        Jam Keluar :
+        <input type="number" value="" id="keluar">
+        <br><br>
+        <button onclick="hitung_parkir()">Biaya Parkir</button>
+        <br>
+        <h2>Biaya parkir yang harus dibayar :</h2>
+        <span id="hasil"></span>
+        <br>
+        <hr>
+    </fieldset> 
+</body>
+</html>
