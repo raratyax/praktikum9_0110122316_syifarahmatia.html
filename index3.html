@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index3</title>
+    <script>
+        function dolar_rupiah() {
+                const perdolar = 14650;
+                let _dolar = document.getElementById("dolar").value;     
+                console.log(_dolar + " Dollar " + " = " + _dolar * perdolar + "Rupiah");      
+                let hasil_rupiah = document.getElementById("hasilrupiah");      
+                hasil_rupiah.innerHTML = _dolar + " Dollar " + " = " + _dolar * perdolar + " Rupiah ";    
+            }
+    </script>
+</head>
+<body>
+    <a href="index.html">Penjumlahan</a> |
+    <a href="index2.html">Keliling & Luas Lingkaran</a> |
+    Menghitung Kurs Rupiah | 
+    <a href="index4.html">Biaya Parkir</a>
+
+    <br>
+    <hr>
+    <br>
+    <fieldset>
+        <hr>
+        <h1>Menghitung Kurs Dollar ke Rupiah</h1>
+        Masukan Dollar : 
+        <input type="number" value="" id="dolar">
+        <button onclick="dolar_rupiah()">Hitung Dollar ke Rupiah</button>
+        <br>
+        <h2>Hasil :</h2> <span id="hasilrupiah"></span>
+        <br>
+        <hr>
+    </fieldset>      
+</body>
+</html>
